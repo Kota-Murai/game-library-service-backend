@@ -1,5 +1,11 @@
 // Query文字列生成処理
 
+//テーブル名
+const famicomTableName = "famicomtitle"
+const n64TableName = "n64title"
+// テーブル一覧 クエリ生成時に参照する
+const dbTableName = [famicomTableName, n64TableName]
+
 // ゲーム情報取得クエリ生成処理
 exports.createQuery = (body)=> {
     const {famicom, n64, yearmin, yearmax, page, title} = body

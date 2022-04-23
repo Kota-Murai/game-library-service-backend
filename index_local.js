@@ -5,14 +5,6 @@ const express = require('express');
 const app = express();
 const {createQuery, createQueryForGetRecordNum} = require("./createQueryString.js");
 
-
-//テーブル名
-const famicomTableName = "famicomtitle"
-const n64TableName = "n64title"
-// テーブル一覧 クエリ生成時に参照する
-const dbTableName = [famicomTableName, n64TableName]
-
-
 // expressサーバー
 const server = app.listen(8080, function () {
     var host = server.address().address;
@@ -82,8 +74,8 @@ app.post('/', async (req, res)=>{
 
   const connection = await mysql.createConnection({
     host     : 'mysqldb',
-    user     : 'hogehoge',
-    password : 'hogehoge',
+    user     : 'toposon',
+    password : 'KtKs5223!',
     database : 'gamedata',
     port     : 3306
   });
